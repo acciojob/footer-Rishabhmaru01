@@ -10,10 +10,6 @@ body {
   color: white;
 }
 
-footer {
-  background: #000;
-  width: 100%;
-}
 
 footer .content {
   max-width: 1250px;
@@ -21,6 +17,7 @@ footer .content {
   padding: 40px 30px;
 }
 
+/* Top section */
 footer .top {
   display: flex;
   justify-content: space-between;
@@ -32,13 +29,15 @@ footer .top {
   font-weight: 600;
 }
 
-/* ✅ Make .media-icons flex (to pass test) */
-.media-icons {
-  display: flex;
+/* ✅ Ensure .media-icons uses flex */
+footer .media-icons {
+  display: flex !important;
   gap: 15px;
+  align-items: center;
+  justify-content: center;
 }
 
-.media-icons a {
+footer .media-icons a {
   height: 35px;
   width: 35px;
   background: #1a1a1a;
@@ -49,50 +48,51 @@ footer .top {
   transition: all 0.3s ease;
 }
 
-.media-icons a:hover {
+footer .media-icons a:hover {
   background: #3b82f6;
 }
 
-/* ✅ The container expected by Cypress */
-.link-boxes {
-  display: flex;
+/* ✅ Ensure .link-boxes uses flex */
+footer .link-boxes {
+  display: flex !important;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 40px;
+  width: 100%;
 }
 
-.link-boxes .box {
+footer .link-boxes .box {
   list-style: none;
 }
 
-.link-boxes .link_name {
+footer .link-boxes .link_name {
   font-size: 16px;
   font-weight: 500;
   text-decoration: underline;
   margin-bottom: 10px;
 }
 
-.link-boxes li {
+footer .link-boxes li {
   margin: 8px 0;
 }
 
-.link-boxes a {
+footer .link-boxes a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.link-boxes a:hover {
+footer .link-boxes a:hover {
   color: #fff;
 }
 
 /* Bottom section */
-.bottom-details {
+footer .bottom-details {
   background: #222;
   padding: 15px 30px;
 }
 
-.bottom_text {
+footer .bottom_text {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -100,30 +100,12 @@ footer .top {
   color: #aaa;
 }
 
-.bottom_text a {
+footer .bottom_text a {
   color: #aaa;
   text-decoration: none;
 }
 
-.bottom_text a:hover {
+footer .bottom_text a:hover {
   color: #fff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  footer .top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .link-boxes {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .bottom_text {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
