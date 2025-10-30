@@ -10,6 +10,10 @@ body {
   color: white;
 }
 
+footer {
+  background: #000;
+  width: 100%;
+}
 
 footer .content {
   max-width: 1250px;
@@ -29,7 +33,8 @@ footer .top {
   font-weight: 600;
 }
 
-/* ✅ Ensure .media-icons uses flex */
+/* ✅ Make sure both selectors exist (footer-scoped + global) */
+.media-icons,
 footer .media-icons {
   display: flex !important;
   gap: 15px;
@@ -37,7 +42,7 @@ footer .media-icons {
   justify-content: center;
 }
 
-footer .media-icons a {
+.media-icons a {
   height: 35px;
   width: 35px;
   background: #1a1a1a;
@@ -48,11 +53,12 @@ footer .media-icons a {
   transition: all 0.3s ease;
 }
 
-footer .media-icons a:hover {
+.media-icons a:hover {
   background: #3b82f6;
 }
 
-/* ✅ Ensure .link-boxes uses flex */
+/* ✅ Same fix for link-boxes */
+.link-boxes,
 footer .link-boxes {
   display: flex !important;
   justify-content: space-between;
@@ -61,28 +67,28 @@ footer .link-boxes {
   width: 100%;
 }
 
-footer .link-boxes .box {
+.link-boxes .box {
   list-style: none;
 }
 
-footer .link-boxes .link_name {
+.link-boxes .link_name {
   font-size: 16px;
   font-weight: 500;
   text-decoration: underline;
   margin-bottom: 10px;
 }
 
-footer .link-boxes li {
+.link-boxes li {
   margin: 8px 0;
 }
 
-footer .link-boxes a {
+.link-boxes a {
   color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-footer .link-boxes a:hover {
+.link-boxes a:hover {
   color: #fff;
 }
 
@@ -109,3 +115,21 @@ footer .bottom_text a:hover {
   color: #fff;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  footer .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .link-boxes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bottom_text {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
