@@ -1,135 +1,80 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #111;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-}
-
+/* your code here */
 footer {
-  background: #000;
-  width: 100%;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
 }
 
-footer .content {
-  max-width: 1250px;
+.content {
+  max-width: 1200px;
   margin: auto;
-  padding: 40px 30px;
 }
 
-/* Top section */
-footer .top {
+.top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo_name {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
 
-/* ✅ Make sure both selectors exist (footer-scoped + global) */
-.media-icons,
-footer .media-icons {
-  display: flex !important;
-  gap: 15px;
-  align-items: center;
-  justify-content: center;
+.media-icons {
+  display: flex;
+  gap: 10px;
 }
 
 .media-icons a {
-  height: 35px;
-  width: 35px;
-  background: #1a1a1a;
-  border-radius: 50%;
   color: white;
-  text-align: center;
-  line-height: 35px;
-  transition: all 0.3s ease;
+  font-size: 20px;
 }
 
-.media-icons a:hover {
-  background: #3b82f6;
-}
-
-/* ✅ Same fix for link-boxes */
-.link-boxes,
-footer .link-boxes {
-  display: flex !important;
-  justify-content: space-between;
+.link-boxes {
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
-  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.link-boxes .box {
+.link-boxes ul {
   list-style: none;
+  padding: 0;
 }
 
-.link-boxes .link_name {
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: underline;
+.link-boxes h4 {
   margin-bottom: 10px;
-}
-
-.link-boxes li {
-  margin: 8px 0;
+  font-size: 18px;
+  color: #fff;
 }
 
 .link-boxes a {
-  color: #ccc;
   text-decoration: none;
-  transition: color 0.3s ease;
+  color: #ccc;
 }
 
 .link-boxes a:hover {
   color: #fff;
 }
 
-/* Bottom section */
-footer .bottom-details {
-  background: #222;
-  padding: 15px 30px;
-}
-
-footer .bottom_text {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.bottom-details {
+  text-align: center;
+  margin-top: 20px;
   font-size: 14px;
   color: #aaa;
 }
 
-footer .bottom_text a {
-  color: #aaa;
-  text-decoration: none;
-}
-
-footer .bottom_text a:hover {
-  color: #fff;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  footer .top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
   .link-boxes {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
   }
 
-  .bottom_text {
-    flex-direction: column;
-    gap: 10px;
+  .media-icons {
+    justify-content: center;
+    margin-top: 10px;
   }
 }
